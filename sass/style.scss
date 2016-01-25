@@ -1,0 +1,22 @@
+/*!
+Theme Name: Master Theme
+Theme URI: http://amiephipps.com
+Author: Amie Phipps
+Author URI: http://amiephipps.com
+Description: WordPress master theme 
+Version: 1.0
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: master_theme
+Tags: fluid-layout, editor-style, featured-images, theme-options, light, responsive-layout, full-width-template
+*/
+
+
+// Import Variables & Mixins first so they can be used throughout the stylesheet.
+
+@import "base/base";
+@import "typography/typography";
+@import "navigation/navigation";
+@import "layout";
+@import "allblog";
+	

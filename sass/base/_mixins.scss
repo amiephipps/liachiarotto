@@ -1,0 +1,150 @@
+// *
+// * Typography Mixins
+// *
+
+// function - converts px to em
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+
+// Example of PX to EM Usage:
+// h1 {
+//   font-size: em(32);
+// }
+
+$browser-default: 16; // Default
+
+@function em($size, $context: $browser-default) {
+  @return #{$size/$context}em;
+}
+
+// function - converts px to rem
+// Source: http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+//mixins that also calculate fontsize and line height using the calculateRem function
+
+// @mixin fontSize($size) {
+//   font-size: $size; //Fallback in px if browser doesn't support rem
+//   font-size: calculateRem($size);
+// }
+
+// @mixin lineHeight($size) {
+//   line-height: $size; //Fallback in px if browser doesn't support rem
+//   line-height: calculateRem($size);
+// }
+
+//calculate fontsize NOT using the calculateRem function
+@mixin fontSize($fontSize) {
+	font-size: $fontSize * 1px;
+	font-size: ($fontSize / 10) * 1rem;
+}
+
+@mixin lineHeight($size) {
+  line-height: $size; //Fallback in px if browser doesn't support rem
+  line-height: ($fontSize / 10) * 1rem;
+}
+
+// heading font family
+// ---------------
+@mixin headingFont {
+	font:{
+	  family: $headingFont;
+	  style: normal;
+	  weight: 400;
+	  }
+}
+
+// body font family
+// ---------------
+@mixin bodyFont {
+	font:{
+	  family: $bodyFont;
+	  style: normal;
+	  weight: 400;
+	  }
+}
+
+//================= END OF TYPOGRAPHY MIXINS
+
+
+
+// *
+// * Breakpoint Mixins
+// *
+
+// Breakpoints for desktop first approach ================
+
+@mixin breakpoint($point) {
+
+  $bp-giant:      "(max-width: 1900px)"; // large desktops
+  $bp-huge:       "(max-width: 1600px)";
+  $bp-large:      "(max-width: 1200px)"; //desktops
+  $bp-medium:     "(max-width: 992px)"; // tablets and small desktops 
+  $bp-little:     "(max-width: 768px)"; // ipads and tablets
+  $bp-tiny:       "(max-width: 500px)"; // smartphones (landscape and portrait)
+  $bp-mini:       "(max-width: 325px)"; // iphones
+
+  
+  @if $point == 1900 {
+    @media #{$bp-giant} { @content; }
+  }
+  @elseif $point == huge {
+    @media #{$bp-huge} { @content; }
+  }
+  @else if $point == large {
+    @media #{$bp-large} { @content; }
+  }
+  @else if $point == medium {
+    @media #{$bp-medium}  { @content; }
+  }
+  @else if $point == little {
+    @media #{$bp-little}  { @content; }
+  }
+  @else if $point == 480 {
+    @media #{$bp-tiny}  { @content; }
+  }   
+  @else if $point == mini {
+    @media #{$bp-mini}  { @content; }
+  }
+}
+
+// Breakpoints for mobile first approach ==================
+
+// @mixin breakpoint($point) {
+
+//   $bp-giant:      "(min-width: 1900px)"; // large desktops 
+//   $bp-huge:       "(min-width: 1600px)"; 
+//   $bp-large:      "(min-width: 1200px)"; //desktops
+//   $bp-medium:     "(min-width: 992px)"; // tablets and small desktops 
+//   $bp-little:     "(min-width: 767px)"; // ipads and tablets
+//   $bp-tiny:       "(min-width: 480px)"; // smartphones (landscape and portrait)
+//   $bp-mini:       "(min-width: 320px)"; // iphones
+
+  
+//   @if $point == giant {
+//     @media #{$bp-giant} { @content; }
+//   }
+//   @elseif $point == huge {
+//     @media #{$bp-huge} { @content; }
+//   }
+//   @else if $point == large {
+//     @media #{$bp-large} { @content; }
+//   }
+//   @else if $point == medium {
+//     @media #{$bp-medium}  { @content; }
+//   }
+//   @else if $point == little {
+//     @media #{$bp-little}  { @content; }
+//   }
+//   @else if $point == tiny {
+//     @media #{$bp-tiny}  { @content; }
+//   }   
+//   @else if $point == mini {
+//     @media #{$bp-mini}  { @content; }
+//   }
+// }
+
+//================= END OF BREAKPOINT MIXINS

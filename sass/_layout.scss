@@ -1,0 +1,36 @@
+/*================================
+=            # Layout            =
+================================*/
+
+body {
+	background: $backgroundcolor;
+	margin: 0;
+	padding: 0;
+}
+ 
+.container { 
+	max-width: $mainContent;
+	width: $width;
+	margin: 0 auto;
+} // .container
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+.flexParent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/*=====  End of Layout  ======*/

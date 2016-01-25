@@ -1,0 +1,50 @@
+/*====================================
+=            ## Headings           =
+====================================*/
+
+h1, h2, h3, h4, h5, h6 {
+	@include headingFont; 
+	margin: 0.5em 0;
+}
+
+h1 {
+	@include fontSize(45);
+	@include lineHeight(55);
+}
+
+h2 {
+	@include fontSize(35);
+	@include lineHeight(45);
+}
+
+h3{
+	@include fontSize(30);
+	@include lineHeight(40);
+}
+
+h4 {
+	@include fontSize(25);
+	@include lineHeight(35);
+}
+h5 {
+	@include fontSize(22);
+	@include lineHeight(32);
+}
+
+h6 {
+	@include fontSize(19);
+	@include lineHeight(29);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& a {
+		color:$linkcolor;
+	}
+}
+
+/*=====  End of Headings ======*/

@@ -1,0 +1,53 @@
+###Wordpress###
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+wp-config.php
+advanced-cache.php
+backup-db/
+backups/
+blogs.dir/
+upgrade/
+uploads/
+wp-cache-config.php
+uploads/
+upgrade/
+languages/
+
+###SublimeText###
+
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+.DS_Store
+
+###SASS###
+.sass-cache
+*.css.map
+.DS_Store
+
+### ignore ###
+node_modules
+
+### Back Up Plugin ###
+backupwordpress-eb2655e876-backups/
+backupwordpress-965dffb711-backups/
+plugins/backupwordpress-pro-dropbox/
+exports-wp-db-migrate/
+
+### Premium Plugins ###
+plugins/advanced-custom-fields-pro
+plugins/wp-migrate-db-pro
+plugins/wp-migrate-db-pro-media-files
