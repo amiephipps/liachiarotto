@@ -139,7 +139,6 @@ function master_theme_scripts() {
     null, // version number
     true //load in footer
   );
-}
 
   wp_enqueue_script(
     'smoothScroll', //handle
@@ -194,7 +193,7 @@ function master_theme_continue_reading_link() {
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and master_theme_continue_reading_link().
  */
 function master_theme_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hackeryou_continue_reading_link();
+	return ' &hellip;' . master_theme_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'master_theme_auto_excerpt_more' );
 
@@ -349,18 +348,18 @@ add_action('init', 'clean_stuff_up');
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
  */
-// function hackeryou_remove_recent_comments_style() {
+// function master_theme_remove_recent_comments_style() {
 // 	global $wp_widget_factory;
 // 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 // }
-// add_action( 'widgets_init', 'hackeryou_remove_recent_comments_style' );
+// add_action( 'widgets_init', 'master_theme_remove_recent_comments_style' );
 
 
-// if ( ! function_exists( 'hackeryou_posted_on' ) ) :
+// if ( ! function_exists( 'master_theme_posted_on' ) ) :
 // /**
 //  * Prints HTML with meta information for the current post—date/time and author.
 //  */
-// function hackeryou_posted_on() {
+// function master_theme_posted_on() {
 // 	printf('<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s',
 // 		'meta-prep meta-prep-author',
 // 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -377,11 +376,11 @@ add_action('init', 'clean_stuff_up');
 // }
 // endif;
 
-// if ( ! function_exists( 'hackeryou_posted_in' ) ) :
+// if ( ! function_exists( 'master_theme_posted_in' ) ) :
 // /**
 //  * Prints HTML with meta information for the current post (category, tags and permalink).
 //  */
-// function hackeryou_posted_in() {
+// function master_theme_posted_in() {
 // 	// Retrieves tag list of current post, separated by commas.
 // 	$tag_list = get_the_tag_list( '', ', ' );
 // 	if ( $tag_list ) {

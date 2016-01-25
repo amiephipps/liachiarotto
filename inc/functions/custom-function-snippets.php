@@ -72,7 +72,7 @@ add_filter('tiny_mce_before_init', 'master_theme_change_mce_colors');
 
 /* Custom Title Tags */
 
-function hackeryou_wp_title( $title, $sep ) {
+function master_theme_wp_title( $title, $sep ) {
     global $paged, $page;
 
     if ( is_feed() ) {
@@ -90,9 +90,9 @@ function hackeryou_wp_title( $title, $sep ) {
 
     // Add a page number if necessary.
     if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'hackeryou' ), max( $paged, $page ) );
+        $title = "$title $sep " . sprintf( __( 'Page %s', 'master_theme' ), max( $paged, $page ) );
     }
 
     return $title;
 }
-add_filter( 'wp_title', 'hackeryou_wp_title', 10, 2 );
+add_filter( 'wp_title', 'master_theme_wp_title', 10, 2 );
