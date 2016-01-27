@@ -14,8 +14,10 @@
 <head>
    <meta charset="<?php bloginfo( "charset" ); ?>" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="author" href="humans.txt" />
    <title><?php wp_title( '|', true, 'right' ); ?></title>
+   <link rel="author" href="humans.txt" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
    <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
    <?php wp_head(); // Lets other plugins and files tie into our theme's <head>?>
@@ -24,22 +26,20 @@
 <body <?php body_class(); ?>>
    <div id="page">
 
-      <header role="banner" class="site-header container">
-         <a href="#main" class="screen-reader-text" id="skiptomain"><?php esc_html_e('Skip to content', 'master_theme'); ?></a>
+      <header role="banner">
 
-         <h1>
-            <a href="<?php echo esc_url( home_url( "/" ) ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-               <?php bloginfo( "name", 'display' ); ?>
-            </a>
-         </h1>
+         <a href="http://chiarottolaw.com"><img src="<?php bloginfo('template_url'); ?>/assets/chiarottolawlogo.png" alt=""></a>
 
          <nav role="navigation">
-            <ul class="siteMenu siteMenu--Main">
+            <ul class="siteMenu">
                <?php wp_nav_menu( array( 
                   "theme_location" => "primary", 
                   "container" => false, 
                   'items_wrap'=> '%3$s'
                )); ?>
             </ul>
-         </nav>  
+         </nav>
+
+         <p>416-214-2440</p>
+         
       </header><!--  header -->

@@ -1,0 +1,13 @@
+begin:vcard
+version:3.0
+prodid:Microsoft-MacOutlook/14.0.0.100825
+UID:581125D7-19BB-490A-9B1E-A8586D9E8409
+fn;charset=utf-8:Lia Chiarotto
+n;charset=utf-8:Chiarotto;Lia;;;
+title;charset=utf-8:Principal\, Chiarotto Law
+adr;charset=utf-8;type=work;type=pref:;;100 King Street West\, Suite 5700;Toronto;ON;M5X 1C7;Canada
+label;charset=utf-8;type=work;type=pref:100 King Street West\, Suite 5700\nToronto\, ON M5X 1C7\nCanada
+tel;charset=utf-8;type=work:416-214-2440
+tel;charset=utf-8;type=work;type=fax:416-214-1440
+email;charset=utf-8;type=internet;type=pref;type=work:lchiarotto@chiarottolaw.com
+end:vcard

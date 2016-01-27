@@ -13,15 +13,9 @@
 	</div> <!-- #page -->
 	 
 	<footer id="colophon" role="contentinfo" class="siteFooter container">	
-		<nav class="siteNavigation--Footer" role="navigation">
-		    <ul class="siteMenu--Footer" role="menu">
-		    	<li><?php get_template_part('inc/social-links'); ?></li>
-		    	<li>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?></a></li>
-		         <?php wp_nav_menu( array( "theme_location" => "footer", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
-		         <li><a href="<?php echo esc_url( "http://amiephipps.com" ); ?>"><?php esc_html_e('Development by Amie', 'master_theme') ?></a></li>
-		         <li><a href="#top"><?php esc_html_e('Back to Top', 'master_theme'); ?></li>
-		    </ul>
-		</nav>
+
+		<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?></p>
+
 	</footer><!-- #colophon -->
 
 	<script>

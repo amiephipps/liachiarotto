@@ -9,24 +9,16 @@
 get_header(); ?>
 
 <main> 
-	<div class="container">
+	<div class="container homepage">
 
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part('content'); ?>
-
-		   <?php if ( !is_singular('page') ) : // this is not a page ?>
-		      <?php comments_template( '', true ); ?>
-				<?php get_template_part( 'inc/pagination' ); ?>
-		   <?php endif; ?>
-
-		<?php endwhile; // end of the loop. ?>
+		<?php the_post_thumbnail( '', array( 'class' => 'img--left' ) ); ?>
+		
+		<div class="homepage--content">
+			<h1><?php the_field( 'slogan' ); ?></h1>
+			<p><?php the_content(); ?></p>
+		</div>
 
 	</div> <!-- container -->
 </main> <!-- main -->
-
-<?php if ( !is_singular( 'page' ) ) : // this is not a page ?>
-	<?php get_sidebar(); ?>
-<?php endif; ?>
 
 <?php get_footer(); ?>

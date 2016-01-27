@@ -8,27 +8,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include fontSize(45);
-	@include lineHeight(55);
+	@include fontSize(50);
+	@include lineHeight(60);
 }
 
 h2 {
-	@include fontSize(35);
-	@include lineHeight(45);
+	@include fontSize(32);
+	@include lineHeight(42);
 }
 
 h3{
-	@include fontSize(30);
-	@include lineHeight(40);
-}
-
-h4 {
 	@include fontSize(25);
 	@include lineHeight(35);
 }
-h5 {
+
+h4 {
 	@include fontSize(22);
 	@include lineHeight(32);
+}
+h5 {
+	@include fontSize(20);
+	@include lineHeight(30);
 }
 
 h6 {

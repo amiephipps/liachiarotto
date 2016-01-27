@@ -121,7 +121,15 @@ function master_theme_scripts() {
   	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
   	null, //version number
-  	true //load in footer
+  	false //load in footer
+  );
+
+  wp_enqueue_script(
+  	'jqueryUI',
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/ui/1.11.4/jquery-ui.js",
+  	false, //dependencies
+  	null, //version number
+  	false //load in footer
   );
 
   wp_enqueue_script(
@@ -323,7 +331,7 @@ add_action( 'customize_register', 'master_theme_social_profiles' );
  * Remove the front-end admin bar for everybody, always
  */
 
-show_admin_bar( false );
+show_admin_bar( true );
 
 
 /**
