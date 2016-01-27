@@ -106,7 +106,7 @@ add_action( 'after_setup_theme', 'master_theme_setup' );
 // Add all JavaScript files here. Let WordPress add them to our templates automatically instead of writing out own script tags in the header and footer
 function master_theme_scripts() {
 	
-    //wp_enqueue_style( 'master-theme-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic', false ); // theme google fonts
+    wp_enqueue_style( 'master_theme_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700', false ); // theme google fonts
     //wp_enqueue_style( 'master-theme-style', get_stylesheet_uri() ); // theme style.css file
 
 	// if ( is_singular('post') && comments_open() && get_option( 'thread_comments' ) ) {

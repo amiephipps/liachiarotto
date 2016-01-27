@@ -18,7 +18,7 @@ gulp.task('bs', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('/sass/**/*.scss')
+  return gulp.src('./sass/**/*.scss')
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
@@ -33,7 +33,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('./js/*.js')
+  return gulp.src('./js/scripts.js')
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))

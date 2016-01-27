@@ -44,7 +44,7 @@ $browser-default: 16; // Default
 
 @mixin lineHeight($size) {
   line-height: $size; //Fallback in px if browser doesn't support rem
-  line-height: ($fontSize / 10) * 1rem;
+  line-height: ($size / 10) * 1rem;
 }
 
 // heading font family
