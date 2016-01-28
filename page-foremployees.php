@@ -8,10 +8,14 @@
 get_header(); ?>
 
 <main>
-   <div class="container">
+   <div class="container employees">
    
-		<?php the_post_thumbnail( ); ?>
-   	<?php the_content(); ?>
+		<section class="employees_content">
+			<div><?php the_post_thumbnail( '', array( 'class' => 'employees_image-right' ) ); ?></div>
+	   	<div class="employees_content-left">
+	   		<?php the_content(); ?>	
+	   	</div>		
+		</section>
 
    	<ul>
    		<?php while( has_sub_field( 'list_of_services' ) ): ?>

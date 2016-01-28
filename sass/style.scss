@@ -22,4 +22,192 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "navigation/navigation";
 @import "layout";
 @import "allblog";
-	
+
+// HOMEPAGE STYLING
+.homepage {
+	@extend .flexParent;
+	.homepage_mainImage {
+		width: 35%;
+		text-align: center;
+		img {
+			margin-bottom: -3px;
+		}
+	}
+	.homepage_content {
+		width: 60%;
+		padding: 8em 0 1rem 1rem;
+	}
+}
+// END OF HOMEPAGE STYLING
+
+
+// ABOUT PAGE STYLING
+.about {
+	.about_header {
+		padding: 7rem 0;
+		@extend .flexParent;
+		justify-content: space-around;
+		align-items: center;
+		.about_header-contact {
+			width: 38%;
+			background: $almostWhite;
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50); 
+			border-left: 7px solid $mainColor;
+			div:first-of-type {
+				padding-left: 2em;
+				h2 {
+					margin-bottom: 0;
+				}
+				h3 {
+					margin-top: 0;
+				}
+			}
+			div:last-of-type {
+				padding: 0.5em 0 2em 15em;
+				p {
+					margin: 0.5em 0;
+				}
+				i {
+					padding-right: 1em;
+				}
+			}
+		}
+		.about_header-image {
+			width: 40%;
+			text-align: center;
+			img {
+				max-width: 400px;
+				box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+			}
+		}
+	}
+	.about_content {
+		@include fontSize(16);
+		@extend .flexParent;
+		justify-content: space-around;
+		li {
+			list-style-type: none;
+		}
+		#tabs {
+			width: 62%;
+			border: none;
+			#tabs-2 {
+				li {
+					padding-bottom: 3rem;
+					line-height: 1.5;
+				}
+				li:first-of-type {
+					padding-top: 3rem;
+				}
+			}
+		}
+		aside {
+			width: 23%;
+			h4 {
+				font-weight: 600;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid black;
+			}
+			ul {
+				padding: 0 0 5rem 3rem;
+				li {
+					padding-bottom: 1rem;
+				}
+			}
+		}
+		.ui-tabs .ui-tabs-nav {
+			margin: 0;
+			padding: .2em .2em 0;
+			background: none;
+			border: none;
+			border-bottom: 5px solid $mainColor;
+		}
+		.ui-tabs .ui-tabs-panel {
+			padding: 0;
+		}
+		.ui-state-default {
+			background: none;
+			border-radius: 0;
+			border: 1px solid #979797;
+			box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+			a {
+				font-weight: 600;
+			}
+		}
+		.ui-tabs-active {
+			background: $mainColor;
+			border-bottom: 1px solid $mainColor;
+			a {
+				color: $almostWhite;
+			}
+		}
+	}
+}
+// END OF ABOUT PAGE STYLING
+
+
+// FOR EMPLOYERS PAGE STYLING
+.employers {
+	.employers_content {
+		.employers_image-right {
+			float: right;
+			margin: 3rem 3rem 1rem 2rem;
+			width: 45%;
+			img {
+				box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+			}
+		}
+		.employers_content-left {
+			padding: 1rem 4rem;;
+		}
+	}
+	.employers_services {
+		padding: 2rem 8rem;
+		column-count: 2;
+		column-gap: 12rem;
+		h3 {
+			font-weight: 600;
+		}
+		ul {
+			padding: 0.5rem 0 2rem 5rem;
+			li {
+				@include fontSize(16);
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}
+// END OF FOR EXMPLOYERS PAGE STYLING
+
+// FOR EMPLOYEES PAGE STYLING
+.employees {
+	.employees_content {
+		div .employees_image-right {
+			float: right;
+			margin: 3rem 3rem 1rem 2rem;
+			width: 45%;
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+		}
+		.employees_content-left {
+			padding: 1rem 4rem;;
+		}
+	}
+	ul {
+		padding: 0 8rem 5rem;
+		width: 100%;
+		column-count: 2;
+		column-gap: 10rem;
+		li {
+			@include fontSize(16);
+			padding-bottom: 1rem;
+			word-break: break-all;
+		}
+	}
+}
+
+// END OF FOR EMPLOYEES PAGE STYLING
+
+// CONTACT PAGE STYLING
+
+
+// END OF CONTACT PAGE STYLING

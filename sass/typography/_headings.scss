@@ -18,22 +18,22 @@ h2 {
 }
 
 h3{
-	@include fontSize(25);
-	@include lineHeight(35);
-}
-
-h4 {
-	@include fontSize(22);
-	@include lineHeight(32);
-}
-h5 {
 	@include fontSize(20);
 	@include lineHeight(30);
 }
 
+h4 {
+	@include fontSize(18);
+	@include lineHeight(28);
+}
+h5 {
+	@include fontSize(18);
+	@include lineHeight(28);
+}
+
 h6 {
-	@include fontSize(19);
-	@include lineHeight(29);
+	@include fontSize(18);
+	@include lineHeight(18);
 }
 
 h1,

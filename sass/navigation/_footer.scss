@@ -2,4 +2,14 @@
 =            ## Footer          =
 ================================*/
 
+footer {
+	background: $darkGrey;
+	height: 40px;
+	p {
+		margin: 0;
+		color: darken($almostBlack, 5%);
+		line-height: 40px;
+	}
+}
+
 /*=====  End of Footer  ======*/

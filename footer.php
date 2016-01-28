@@ -12,10 +12,12 @@
 
 	</div> <!-- #page -->
 	 
-	<footer id="colophon" role="contentinfo" class="siteFooter container">	
+	<footer>
+		<div class="container">	
 
-		<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?></p>
+			<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?></p>
 
+		</div>
 	</footer><!-- #colophon -->
 
 	<script>

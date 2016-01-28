@@ -330,8 +330,7 @@ add_action( 'customize_register', 'master_theme_social_profiles' );
 /**
  * Remove the front-end admin bar for everybody, always
  */
-
-show_admin_bar( true );
+show_admin_bar( false );
 
 
 /**

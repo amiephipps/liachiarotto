@@ -28,18 +28,24 @@
 
       <header role="banner">
 
-         <a href="http://chiarottolaw.com"><img src="<?php bloginfo('template_url'); ?>/assets/chiarottolawlogo.png" alt=""></a>
-
-         <nav role="navigation">
-            <ul class="siteMenu">
-               <?php wp_nav_menu( array( 
-                  "theme_location" => "primary", 
-                  "container" => false, 
-                  'items_wrap'=> '%3$s'
-               )); ?>
-            </ul>
-         </nav>
+         <div class="container">
 
          <p>416-214-2440</p>
+
+            <nav role="navigation">
+
+               <a href="http://chiarottolaw.com" class="navigation_logo"><img src="<?php bloginfo('template_url'); ?>/assets/chiarottolawlogo.png" alt=""></a>
+
+               <ul class="siteMenu">
+                  <?php wp_nav_menu( array( 
+                     "theme_location" => "primary", 
+                     "container" => false, 
+                     'items_wrap'=> '%3$s'
+                  )); ?>
+               </ul>
+
+            </nav>
          
+         </div> <!-- container -->
+
       </header><!--  header -->

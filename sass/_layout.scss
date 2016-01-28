@@ -10,9 +10,13 @@ body {
  
 .container { 
 	max-width: $mainContent;
-	width: $width;
+	// width: $width;
 	margin: 0 auto;
-} // .container
+} 
+
+main .container {
+	background: $almostWhite;
+}
 
 img {
 	max-width:100%;
