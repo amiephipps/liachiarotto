@@ -229,7 +229,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			margin: 3rem 3rem 1rem 2rem;
 			width: 45%;
 			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-			@include bp(mini) {
+			@include bp(tiny) {
 				float: none;
 				margin: 0rem auto;
 				width: 90%;
@@ -239,11 +239,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 		.employers_content-left {
 			padding: 1rem 4rem;;
-			@include bp(mini) {
+			@include bp(tiny) {
 				padding: 1rem;
 			}
 		}
-		@include bp(mini) {
+		@include bp(tiny) {
 			padding-top: 3rem;
 		}
 	}
@@ -282,7 +282,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			margin: 3rem 3rem 1rem 2rem;
 			width: 45%;
 			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
-			@include bp(mini) {
+			@include bp(tiny) {
 				float: none;
 				margin: 0rem auto;
 				width: 90%;
@@ -292,11 +292,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		}
 		.employees_content-left {
 			padding: 1rem 4rem;
-			@include bp(mini) {
+			@include bp(tiny) {
 				padding: 1rem 2rem;
 			}
 		}
-		@include bp(mini) {
+		@include bp(tiny) {
 			padding-top: 3rem;
 		}
 	}
