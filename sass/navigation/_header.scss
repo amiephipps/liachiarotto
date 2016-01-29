@@ -35,6 +35,9 @@ header {
 		text-align: right;
 		padding-top: 2rem;
 		margin: 0;
+		@include bp(medium) {
+			padding-right: 2rem;
+		}
 	}
 }
 

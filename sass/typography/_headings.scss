@@ -27,13 +27,13 @@ h4 {
 	@include lineHeight(28);
 }
 h5 {
-	@include fontSize(18);
-	@include lineHeight(28);
+	@include fontSize(16);
+	@include lineHeight(26);
 }
 
 h6 {
-	@include fontSize(18);
-	@include lineHeight(18);
+	@include fontSize(16);
+	@include lineHeight(26);
 }
 
 h1,

@@ -5,11 +5,6 @@
 // function - converts px to em
 // Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
 
-// Example of PX to EM Usage:
-// h1 {
-//   font-size: em(32);
-// }
-
 $browser-default: 16; // Default
 
 @function em($size, $context: $browser-default) {
@@ -23,18 +18,6 @@ $browser-default: 16; // Default
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
-
-//mixins that also calculate fontsize and line height using the calculateRem function
-
-// @mixin fontSize($size) {
-//   font-size: $size; //Fallback in px if browser doesn't support rem
-//   font-size: calculateRem($size);
-// }
-
-// @mixin lineHeight($size) {
-//   line-height: $size; //Fallback in px if browser doesn't support rem
-//   line-height: calculateRem($size);
-// }
 
 //calculate fontsize NOT using the calculateRem function
 @mixin fontSize($fontSize) {
@@ -70,25 +53,24 @@ $browser-default: 16; // Default
 //================= END OF TYPOGRAPHY MIXINS
 
 
-
 // *
 // * Breakpoint Mixins
 // *
 
 // Breakpoints for desktop first approach ================
 
-@mixin breakpoint($point) {
+@mixin bp($point) {
 
   $bp-giant:      "(max-width: 1900px)"; // large desktops
   $bp-huge:       "(max-width: 1600px)";
   $bp-large:      "(max-width: 1200px)"; //desktops
-  $bp-medium:     "(max-width: 992px)"; // tablets and small desktops 
+  $bp-medium:     "(max-width: 968px)"; // tablets and small desktops 
   $bp-little:     "(max-width: 768px)"; // ipads and tablets
   $bp-tiny:       "(max-width: 500px)"; // smartphones (landscape and portrait)
   $bp-mini:       "(max-width: 325px)"; // iphones
 
   
-  @if $point == 1900 {
+  @if $point == giant {
     @media #{$bp-giant} { @content; }
   }
   @elseif $point == huge {
@@ -103,90 +85,10 @@ $browser-default: 16; // Default
   @else if $point == little {
     @media #{$bp-little}  { @content; }
   }
-  @else if $point == 480 {
+  @else if $point == tiny {
     @media #{$bp-tiny}  { @content; }
   }   
   @else if $point == mini {
     @media #{$bp-mini}  { @content; }
   }
 }
-
-// Breakpoints for mobile first approach ==================
-
-// @mixin breakpoint($point) {
-
-//   $bp-giant:      "(min-width: 1900px)"; // large desktops 
-//   $bp-huge:       "(min-width: 1600px)"; 
-//   $bp-large:      "(min-width: 1200px)"; //desktops
-//   $bp-medium:     "(min-width: 992px)"; // tablets and small desktops 
-//   $bp-little:     "(min-width: 767px)"; // ipads and tablets
-//   $bp-tiny:       "(min-width: 480px)"; // smartphones (landscape and portrait)
-//   $bp-mini:       "(min-width: 320px)"; // iphones
-
-  
-//   @if $point == giant {
-//     @media #{$bp-giant} { @content; }
-//   }
-//   @elseif $point == huge {
-//     @media #{$bp-huge} { @content; }
-//   }
-//   @else if $point == large {
-//     @media #{$bp-large} { @content; }
-//   }
-//   @else if $point == medium {
-//     @media #{$bp-medium}  { @content; }
-//   }
-//   @else if $point == little {
-//     @media #{$bp-little}  { @content; }
-//   }
-//   @else if $point == tiny {
-//     @media #{$bp-tiny}  { @content; }
-//   }   
-//   @else if $point == mini {
-//     @media #{$bp-mini}  { @content; }
-//   }
-// }
-
-//================= END OF BREAKPOINT MIXINS
-
-
-
-// // *
-// // * Hover.css Mixins - credit: http://ianlunn.github.io/Hover/
-// // *
-
-// /* Underline Reveal */
-// @mixin underline-reveal {
-//   $duration: $mediumDuration;
-
-//   @include hacks();
-//   position: relative;
-//   overflow: hidden;
-
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     z-index: -1;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background: $activeColor;
-//     height: 4px;
-//     @include prefixed(transform, translateY(4px));
-//     @include prefixed(transition-property, transform);
-//     @include prefixed(transition-duration, $duration);
-//     @include prefixed(transition-timing-function, ease-out);
-//   }
-
-//   &:hover,
-//   &:focus,
-//   &:active {
-
-//     &:before {
-//       @include prefixed(transform, translateY(0));
-//     }
-//   }
-// }
-
-// //================= END OF Hover.css MIXINS
-

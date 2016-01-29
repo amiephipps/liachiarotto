@@ -11,7 +11,7 @@ get_header(); ?>
    <div class="container employees">
    
 		<section class="employees_content">
-			<div><?php the_post_thumbnail( '', array( 'class' => 'employees_image-right' ) ); ?></div>
+			<?php the_post_thumbnail( '', array( 'class' => 'employees_image-right' ) ); ?>
 	   	<div class="employees_content-left">
 	   		<?php the_content(); ?>	
 	   	</div>		

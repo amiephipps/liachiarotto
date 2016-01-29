@@ -9,6 +9,9 @@ footer {
 		margin: 0;
 		color: darken($almostBlack, 5%);
 		line-height: 40px;
+		@include bp(medium) {
+			padding-left: 2rem;
+		}
 	}
 }
 
