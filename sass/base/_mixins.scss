@@ -66,8 +66,8 @@ $browser-default: 16; // Default
   $bp-large:      "(max-width: 1200px)"; //desktops
   $bp-medium:     "(max-width: 968px)"; // tablets and small desktops 
   $bp-little:     "(max-width: 768px)"; // ipads and tablets
-  $bp-tiny:       "(max-width: 500px)"; // smartphones (landscape and portrait)
-  $bp-mini:       "(max-width: 325px)"; // iphones
+  $bp-tiny:       "(max-width: 480px)"; // smartphones (landscape and portrait)
+  $bp-mini:       "(max-width: 320px)"; // iphones
 
   
   @if $point == giant {

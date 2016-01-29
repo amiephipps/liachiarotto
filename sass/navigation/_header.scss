@@ -11,11 +11,16 @@ header {
 		@extend .flexParent;
 		.navigation_logo {
 			width: 30%;
+			@include bp(little) {
+				width: 70%;
+			}
 		}
 		.siteMenu {
 			list-style-type: none;
 			width: 70%;
-			@extend .flexParent;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
 			justify-content: space-around;
 			align-items: center;
 			li {
@@ -27,6 +32,28 @@ header {
 					transition: ease 0.5s;
 				}
 			}
+			@include bp(little) {
+				flex-direction: column;
+				width: 100%;
+				text-align: left;
+				display: none;
+				li a {
+					margin: 0.5em 2em;
+				}
+			}
+		}
+		.hamburger {
+			display: none;
+			@include bp(little) {
+				display: inline-block;
+				width: 30%;
+				text-align: right;
+				padding: 1em;
+				cursor: pointer;
+			}
+		}
+		@include bp(little) {
+			align-items: center;
 		}
 	}
 	p {
@@ -37,6 +64,9 @@ header {
 		margin: 0;
 		@include bp(medium) {
 			padding-right: 2rem;
+		}
+		@include bp(tiny) {
+			display: none;
 		}
 	}
 }

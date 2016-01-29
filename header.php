@@ -35,6 +35,8 @@
             <nav role="navigation">
 
                <a href="http://chiarottolaw.com" class="navigation_logo"><img src="<?php bloginfo('template_url'); ?>/assets/chiarottolawlogo.png" alt=""></a>
+               
+               <i class="fa fa-bars fa-3x hamburger"></i>
 
                <ul class="siteMenu">
                   <?php wp_nav_menu( array( 

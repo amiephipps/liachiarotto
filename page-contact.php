@@ -22,7 +22,7 @@ get_header(); ?>
 					<p><?php the_field( 'email_address', 'option' ); ?></p></a>
 
 					<a href="<?php bloginfo('template_url'); ?>/assets/liachiarotto.vcf"><h5>VCARD</h5>
-					<p><?php the_field( 'vcard', 'option' ); ?></p></a>
+					<p class="underline"><?php the_field( 'vcard', 'option' ); ?></p></a>
 
 					<h5>LOCATION</h5>
 					<p><?php the_field( 'address', 'option' ); ?></p>

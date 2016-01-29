@@ -12,6 +12,9 @@ footer {
 		@include bp(medium) {
 			padding-left: 2rem;
 		}
+		@include bp(mini) {
+			@include fontSize(11);
+		}
 	}
 }
 

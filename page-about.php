@@ -20,7 +20,7 @@ get_header(); ?>
 	   		<div>
 	   			<p><i class="fa fa-phone"></i><?php the_field( 'phone_number', 'option' ); ?></p>
 	   			<a href="mailto:lchiarotto@chiarottolaw.com"><p><i class="fa fa-envelope-o"></i><?php the_field( 'email_address', 'option' ); ?></p></a>
-	   			<a href="<?php bloginfo('template_url'); ?>/assets/liachiarotto.vcf"><p><i class="fa fa-user"></i><?php the_field( 'vcard', 'option' ); ?></p></a>
+	   			<a href="<?php bloginfo('template_url'); ?>/assets/liachiarotto.vcf"><p class="underline"><i class="fa fa-user"></i><?php the_field( 'vcard', 'option' ); ?></p></a>
 	   			<a href="https://www.linkedin.com/in/lia-chiarotto-14b24942" target="_blank"><p><i class="fa fa-linkedin"></i><?php the_field( 'linkedin', 'option' ); ?></p></a>
 	   		</div>
 	   	</div>
