@@ -8,8 +8,7 @@
 get_header(); ?>
 
 <main> 
-	<div class="container">
-		<?php get_template_part('content', 'none'); ?>
+	<div class="container notFound">
 
 		<h2>Not Found</h2>
 		<p>Apologies, but the page you requested could not be found. Perhaps searching will help.</p>

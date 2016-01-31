@@ -27,18 +27,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .homepage {
 	@extend .flexParent;
 	align-items: flex-end;
+	justify-content: space-around;
 	.homepage_mainImage {
-		width: 35%;
+		width: 40%;
 		text-align: center;
 		img {
 			margin-bottom: -3px;
+			width: 80%;
+		}
+		@include bp(medium) {
+			width: 35%;
+		}
+		@include bp(little) {
+			img {
+				width: 100%;
+			}
 		}
 	}
 	.homepage_content {
-		width: 60%;
-		padding: 0 0 8rem 1rem;
+		width: 50%;
+		padding: 0 0 10rem 1rem;
 		@include bp(medium) {
-			padding-bottom: 1rem;
+			padding-bottom: 3rem;
+			width: 60%;
 		}
 		@include bp(little) {
 			padding-bottom: 0;
@@ -108,7 +119,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			}
 		}
 		.about_header-image {
-			width: 33%;
+			width: 40%;
 			text-align: center;
 			img {
 				box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
@@ -408,3 +419,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 }
 // END OF CONTACT PAGE STYLING
+
+
+// 404 PAGE STYLING
+.notFound {
+	height: 100vh;
+	padding: 2rem;
+}
+// END OF 404 PAGE STYLING
