@@ -15,6 +15,8 @@
    <meta charset="<?php bloginfo( "charset" ); ?>" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title><?php wp_title( '|', true, 'right' ); ?></title>
+   <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="<?php bloginfo('template_url'); ?>/assets/favicon.ico" type="image/x-icon">
    <link rel="author" href="humans.txt" />
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
